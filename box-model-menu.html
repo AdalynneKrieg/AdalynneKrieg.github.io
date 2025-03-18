@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu Page</title>
+              <style>
+              body {
+                font-family: sans-serif;
+                background-color: #f4f4f4;
+                display: flex;
+                justify-content: space-around;
+                padding: 20px;
+              }
+              
+              .menu {
+                width: 400px;
+                height: 550px;
+                border: 5px solid #ccc;
+                padding: 20px;
+                margin-bottom: 20px;
+                box-sizing: border-box; /* Include padding and border in the element's total width and height */
+              }
+              
+              #breakfast-menu {
+                background-image: url('breakfast-bg.jpg'); /* Replace with your breakfast image */
+                background-size: cover;
+                background-repeat: no-repeat;
+              }
+              
+              #lunch-menu {
+                background-image: url('lunch-bg.jpg'); /* Replace with your lunch image */
+                background-size: cover;
+                background-position: center;
+              }
+              
+              #dinner-menu {
+                background-image: url('dinner-bg.jpg'); /* Replace with your dinner image */
+                background-size: cover;
+                background-repeat: no-repeat;
+              }
+              
+              h2 {
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 15px;
+                color: #333;
+              }
+              
+              ul   {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+              }
+              
+              li {
+                padding: 8px 0;
+                border-bottom: 1px dashed #eee;
+              }
+              
+              li:last-child {
+                border-bottom: none;
+              }
+              
+              .price {
+                float: right;
+                font-weight: bold;
+                color: #555;
+              }
+              </style>
+    </head>
+<body>
+
+  <div id="breakfast-menu" class="menu">
+    <h2>Breakfast Menu</h2>
+    <ul>
+      <li>Pancakes <span class="price">$8.00</span></li>
+      <li>Scrambled Eggs with Toast <span class="price">$7.50</span></li>
+      <li>Oatmeal with Berries <span class="price">$6.50</span></li>
+      <li>Breakfast Burrito <span class="price">$9.00</span></li>
+      <li>Coffee <span class="price">$3.00</span></li>
+    </ul>
+  </div>
+
+  <div id="lunch-menu" class="menu">
+    <h2>Lunch Menu</h2>
+    <ul>
+      <li>Turkey Sandwich <span class="price">$9.50</span></li>
+      <li>Salad with Grilled Chicken <span class="price">$10.50</span></li>
+      <li>Soup of the Day <span class="price">$7.00</span></li>
+      <li>Pizza Slice <span class="price">$4.00</span></li>
+      <li>Soda <span class="price">$2.50</span></li>
+    </ul>
+  </div>
+
+  <div id="dinner-menu" class="menu">
+    <h2>Dinner Menu</h2>
+    <ul>
+      <li>Pasta with Marinara Sauce <span class="price">$12.00</span></li>
+      <li>Grilled Salmon with Vegetables <span class="price">$15.00</span></li>
+      <li>Chicken Stir-Fry <span class="price">$13.50</span></li>
+      <li>Burger with Fries <span class="price">$11.00</span></li>
+      <li>Iced Tea <span class="price">$3.00</span></li>
+    </ul>
+  </div>
+
+</body>
+</html>
