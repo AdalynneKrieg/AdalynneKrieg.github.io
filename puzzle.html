@@ -4,39 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header class="info">
-            <h1>Adalynne Krieg - Butterfly Bonanza!</h1>
+    </head>
+<body style="margin: 0; font-family: 'Arial', sans-serif; background-color: #f4f4f4; color: #333;">
+    <div class="container" style="display: grid; grid-template-rows: auto 1fr auto; min-height: 100vh; grid-gap: 10px; padding: 10px; box-sizing: border-box;">
+        <header class="info" style="text-align: center; padding: 20px; background-color: #e0f7fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h1 style="margin: 0; color: #00838f;">Adalynne Krieg - Butterfly Bonanza!</h1>
         </header>
 
-         <main class="puzzle-area">
+        <main class="puzzle-area" style="display: flex; justify-content: center; align-items: center; padding: 20px;">
+            <div class="puzzle" style="display: flex; flex-wrap: wrap; max-width: 600px; justify-content: flex-start; border: 2px solid #00acc1; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); background-color: white; padding: 10px;">
+                <img src="images/puzzle1_M.jpg" class="puzzle-piece" alt="Puzzle Piece M" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_N.jpg" class="puzzle-piece" alt="Puzzle Piece N" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_Q.jpg" class="puzzle-piece" alt="Puzzle Piece Q" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_O.jpg" class="puzzle-piece" alt="Puzzle Piece O" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_J.jpg" class="puzzle-piece" alt="Puzzle Piece J" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_P.jpg" class="puzzle-piece" alt="Puzzle Piece P" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_I.jpg" class="puzzle-piece" alt="Puzzle Piece I" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_K.jpg" class="puzzle-piece" alt="Puzzle Piece K" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_E.jpg" class="puzzle-piece" alt="Puzzle Piece E" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_L.jpg" class="puzzle-piece" alt="Puzzle Piece L" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_A.jpg" class="puzzle-piece" alt="Puzzle Piece A" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_F.jpg" class="puzzle-piece" alt="Puzzle Piece F" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_B.jpg" class="puzzle-piece" alt="Puzzle Piece B" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_G.jpg" class="puzzle-piece" alt="Puzzle Piece G" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_C.jpg" class="puzzle-piece" alt="Puzzle Piece C" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_D.jpg" class="puzzle-piece" alt="Puzzle Piece D" style="width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+                <img src="images/puzzle1_H.jpg" class="puzzle-piece" alt="Bad Piece" style="display: none; width: 150px; height: 150px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; transition: transform 0.2s ease-in-out;">
+            </div>
+        </main>
 
-            <div class="puzzle">
-                <img src="images/puzzle1_M.jpg" class="puzzle-piece" alt="Puzzle Piece M">
-                <img src="images/puzzle1_N.jpg" class="puzzle-piece" alt="Puzzle Piece N">
-                <img src="images/puzzle1_Q.jpg" class="puzzle-piece" alt="Puzzle Piece Q">
-                <img src="images/puzzle1_O.jpg" class="puzzle-piece" alt="Puzzle Piece O">
-                <img src="images/puzzle1_J.jpg" class="puzzle-piece" alt="Puzzle Piece J">
-                <img src="images/puzzle1_P.jpg" class="puzzle-piece" alt="Puzzle Piece P">
-                <img src="images/puzzle1_I.jpg" class="puzzle-piece" alt="Puzzle Piece I">
-                <img src="images/puzzle1_K.jpg" class="puzzle-piece" alt="Puzzle Piece K">
-                <img src="images/puzzle1_E.jpg" class="puzzle-piece" alt="Puzzle Piece E">
-                <img src="images/puzzle1_L.jpg" class="puzzle-piece" alt="Puzzle Piece L">
-                <img src="images/puzzle1_A.jpg" class="puzzle-piece" alt="Puzzle Piece A">
-                <img src="images/puzzle1_F.jpg" class="puzzle-piece" alt="Puzzle Piece F">
-                <img src="images/puzzle1_B.jpg" class="puzzle-piece" alt="Puzzle Piece B">
-                <img src="images/puzzle1_G.jpg" class="puzzle-piece" alt="Puzzle Piece G">
-                <img src="images/puzzle1_C.jpg" class="puzzle-piece" alt="Puzzle Piece C">
-                <img src="images/puzzle1_D.jpg" class="puzzle-piece" alt="Puzzle Piece D">
-                <img src="images/puzzle1_H.jpg" class="puzzle-piece" alt="Bad Piece" style="display: none;">
-            </div>
-
-        </main>
-
-        <footer class="date">
+        <footer class="date" style="text-align: center; padding: 10px; background-color: #e0e0e0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
             <p>Completed on: 4/6/25</p>
         </footer>
     </div>
