@@ -1,0 +1,35 @@
+table {
+  width: 80%; /* Make the table take up 80% of its container */
+  margin: 20px auto; /* Center the table on the page with some space around it */
+  border-collapse: collapse; /* Make single borders instead of double ones */
+  font-family: sans-serif; /* A common and readable font */
+}
+
+/* Style for the table header (the top row with "Team", "Q1", etc.) */
+thead th {
+  background-color: #f2f2f2; /* Light gray background */
+  color: #333; /* Dark gray text */
+  padding: 10px; /* Space inside the cells */
+  text-align: left; /* Align text to the left */
+  border-bottom: 2px solid #ddd; /* A light gray line at the bottom */
+}
+
+/* Style for the table body rows */
+tbody tr {
+  border-bottom: 1px solid #eee; /* Very light gray line between rows */
+}
+
+/* Style for the last row in the body to make it a bit different */
+tbody tr:last-child {
+  border-bottom: 2px solid #ddd; /* A slightly thicker light gray line at the bottom of the data */
+}
+
+/* Style for the data cells (the numbers and team names) */
+tbody td {
+  padding: 8px; /* Some space inside the cells */
+}
+
+/* Style for when you hover your mouse over a table row */
+tbody tr:hover {
+  background-color: #e0f7fa; /* Light blue background on hover */
+}
