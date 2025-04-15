@@ -1,3 +1,7 @@
+Okay, if you put the changes we talked about into your current style.css file, it would look like this:
+
+CSS
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -35,10 +39,10 @@ body {
 }
 
 .puzzle {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid; /* Changed from flex */
+    grid-template-columns: repeat(4, 1fr); /* New line for 4 columns */
+    grid-template-rows: repeat(4, 1fr); /* New line for 4 rows */
     max-width: 600px;
-    justify-content: flex-start;
     border: 2px solid #00acc1;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -47,8 +51,9 @@ body {
 }
 
 .puzzle-piece {
-    width: 150px;
-    height: 150px;
+    width: 100%; /* Makes the piece fill the grid cell */
+    height: 100%; /* Makes the piece fill the grid cell */
+    object-fit: cover; /* Makes the image fit nicely */
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 4px;
