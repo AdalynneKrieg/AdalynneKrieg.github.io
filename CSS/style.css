@@ -1,70 +1,33 @@
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-.container {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    grid-gap: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.info {
-    text-align: center;
-    padding: 20px;
-    background-color: #e0f7fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.info h1 {
-    margin: 0;
-    color: #00838f;
-}
-
-.puzzle-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
 .puzzle {
-    display: grid; /* Changed from flex */
-    grid-template-columns: repeat(4, 1fr); /* New line for 4 columns */
-    grid-template-rows: repeat(4, 1fr); /* New line for 4 rows */
-    max-width: 600px;
-    border: 2px solid #00acc1;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    padding: 10px;
+  display: flex; /* This tells the container to use flexbox */
+  width: 400px; /* Set a fixed width for the puzzle container */
+  height: 400px; /* Set a fixed height for the puzzle container (same as width for square) */
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  border: 2px solid #00acc1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 10px;
 }
 
 .puzzle-piece {
-    width: 100%; /* Makes the piece fill the grid cell */
-    height: 100%; /* Makes the piece fill the grid cell */
-    object-fit: cover; /* Makes the image fit nicely */
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 4px;
-    transition: transform 0.2s ease-in-out;
+  width: calc(25% - 12px); /* Each piece takes up roughly 25% width, minus some for spacing */
+  height: calc(25% - 12px); /* Each piece takes up roughly 25% height, minus some for spacing */
+  margin-right: 4px; /* Add some space to the right of each piece */
+  margin-bottom: 4px; /* Add some space below each piece */
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+  object-fit: cover; /* Make the image fit nicely in the box */
 }
 
-.puzzle-piece:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+/* Remove the right margin from the last piece in each row */
+.puzzle-piece:nth-child(4n) {
+  margin-right: 0;
 }
 
-.date {
-    text-align: center;
-    padding: 10px;
-    background-color: #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Remove the bottom margin from the last row of pieces */
+.puzzle-piece:nth-last-child(-n+4) {
+  margin-bottom: 0;
 }
