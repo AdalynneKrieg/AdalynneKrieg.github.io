@@ -1,22 +1,25 @@
 .puzzle {
-  display: grid; /* Use CSS Grid instead of Flexbox */
-  width: 400px; /* Keep the fixed width */
-  height: 400px; /* Keep the fixed height */
-  grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
-  grid-template-rows: repeat(4, 1fr); /* Create 4 equal rows */
+  display: grid;
+  width: 80vw;  
+  height: 80vw;  
+  max-width: 400px;
+  max-height: 400px;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: repeat(4, 1fr); 
   border: 2px solid #00acc1;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 10px;
-  gap: 4px; /* Use gap for spacing between pieces */
+  gap: 4px; 
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .puzzle-piece {
   width: auto; /* Let the grid control the width */
   height: auto; /* Let the grid control the height */
-  margin-right: 0; /* No need for right margin anymore */
-  margin-bottom: 0; /* No need for bottom margin anymore */
   border: 1px solid #ccc;
   box-sizing: border-box;
   border-radius: 4px;
