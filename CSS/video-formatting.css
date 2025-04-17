@@ -1,0 +1,78 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #007bff;
+}
+
+.step {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.step h2 {
+    color: #555;
+    margin-top: 0;
+}
+
+.step img {
+    display: block;
+    width: 600px; /* This is the line we added! */
+    height: auto;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.embedded-video {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e9ecef;
+}
+
+.embedded-video h2 {
+    color: #555;
+    margin-top: 0;
+}
+
+.embedded-video iframe {
+    width: 100%; /* Make the video responsive within its container */
+    max-width: 560px; /* Keep the original width as a maximum */
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    color: #777;
+    margin-top: 30px;
+}
