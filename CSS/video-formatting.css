@@ -1,62 +1,62 @@
-body {
+ body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #121212;
-    color: #E0E0E0;
+    background-color: #121212; /* Dark gray/black background */
+    color: #E0E0E0; /* Light gray text */
 }
 
 .container {
     width: 80%;
     margin: 20px auto;
-    background-color: #212121;
+    background-color: #212121; /* Darker gray container */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
 }
 
 header {
     text-align: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid #424242;
+    border-bottom: 1px solid #424242; /* Darker border */
     margin-bottom: 20px;
 }
 
 header h1 {
-    color: #333333;
+    color: #333333; /* Very light gray heading */
 }
 
 .step {
     margin-bottom: 30px;
     padding: 15px;
-    border: 1px solid #424242;
+    border: 1px solid #424242; /* Darker border */
     border-radius: 5px;
-    background-color: #303030;
+    background-color: #303030; /* Dark gray step background */
 }
 
 .step h2 {
-    color: #BDBDBD;
+    color: #BDBDBD; /* Medium gray heading */
     margin-top: 0;
 }
 
 .step img {
     display: block;
-    width: 600px;
+    width: 600px; /* This stays the same */
     height: auto;
     margin-top: 10px;
-    border: 1px solid #616161;
+    border: 1px solid #616161; /* Darker border */
     border-radius: 3px;
 }
 
 .embedded-video {
     margin-top: 40px;
     padding: 20px;
-    border: 1px solid #424242;
+    border: 1px solid #424242; /* Darker border */
     border-radius: 5px;
-    background-color: #424242;
+    background-color: #424242; /* Dark gray embedded video background */
 }
 
 .embedded-video h2 {
-    color: #BDBDBD;
+    color: #BDBDBD; /* Medium gray heading */
     margin-top: 0;
 }
 
@@ -67,11 +67,10 @@ header h1 {
     margin: 10px auto;
     border: none;
 }
-
 footer {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid #424242;
-    color: #757575;
+    border-top: 1px solid #424242; /* Darker border */
+    color: #757575; /* Medium gray text */
     margin-top: 30px;
-}
+} 
