@@ -73,12 +73,21 @@ header h1 {
 }
 
 .embedded-video iframe {
-    display: block;
-    max-width: 100%; /* Make the iframe responsive within its fixed box */
-    height: auto;
-    margin: 10px auto;
+    width: auto; /* Use the iframe's original width */
+    height: auto; /* Use the iframe's original height */
     border: none;
     border-radius: 4px;
+    display: block; /* Prevent extra bottom spacing */
+    margin: 20px auto; /* Center the video on the page with some top/bottom margin */
+}
+
+.embedded-video {
+    text-align: center; /* Center the container for the iframe */
+    padding: 20px; /* Add some padding around the video */
+    background-color: #e0e0e0; /* Keep the background if you like */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
 }
 
 footer {
