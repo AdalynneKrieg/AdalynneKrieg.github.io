@@ -1,76 +1,90 @@
- body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color: #121212; /* Dark gray/black background */
-    color: #E0E0E0; /* Light gray text */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #808080; /* Gray background for the whole page */
+    color: #000; /* Black text for overall readability */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically (optional, depending on desired layout) */
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
 }
 
 .container {
-    width: 80%;
-    margin: 20px auto;
-    background-color: #212121; /* Darker gray container */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    background-color: #fff; /* White background for the main container */
+    width: 80%; /* Adjust as needed */
+    max-width: 960px; /* Maximum width of the container */
+    margin: 20px; /* Add some margin around the container */
+    padding: 20px; /* Add some padding inside the container */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    border-radius: 8px; /* Optional: Add rounded corners to the container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 header {
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #424242; /* Darker border */
-    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc; /* Light gray border */
+    margin-bottom: 20px;
 }
 
 header h1 {
-    color: #333333; /* Very light gray heading */
+    color: #333; /* Dark gray heading */
 }
 
 .step {
-    margin-bottom: 30px;
-    padding: 15px;
-    border: 1px solid #424242; /* Darker border */
-    border-radius: 5px;
-    background-color: #303030; /* Dark gray step background */
+    background-color: #f2f2f2; /* Light gray background for each step section */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Light gray border */
 }
 
 .step h2 {
-    color: #BDBDBD; /* Medium gray heading */
-    margin-top: 0;
+    color: #333; /* Dark gray heading */
+    margin-top: 0;
+}
+
+.step p {
+    line-height: 1.6;
+    color: #555; /* Medium gray text */
 }
 
 .step img {
-    display: block;
-    width: 600px; /* This stays the same */
-    height: auto;
-    margin-top: 10px;
-    border: 1px solid #616161; /* Darker border */
-    border-radius: 3px;
+    display: block;
+    max-width: 100%; /* Make images responsive within their fixed box */
+    height: auto;
+    margin: 10px auto;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px;
 }
 
 .embedded-video {
-    margin-top: 40px;
-    padding: 20px;
-    border: 1px solid #424242; /* Darker border */
-    border-radius: 5px;
-    background-color: #424242; /* Dark gray embedded video background */
+    background-color: #e0e0e0; /* Medium gray background for the embedded video section */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Light gray border */
+    margin-top: 20px;
+    text-align: center;
 }
 
 .embedded-video h2 {
-    color: #BDBDBD; /* Medium gray heading */
-    margin-top: 0;
+    color: #333; /* Dark gray heading */
+    margin-top: 0;
 }
 
 .embedded-video iframe {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border: none;
+    display: block;
+    max-width: 100%; /* Make the iframe responsive within its fixed box */
+    height: auto;
+    margin: 10px auto;
+    border: none;
+    border-radius: 4px;
 }
+
 footer {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #424242; /* Darker border */
-    color: #757575; /* Medium gray text */
-    margin-top: 30px;
-} 
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ccc; /* Light gray border */
+    color: #777; /* Medium gray text */
+    margin-top: 30px;
+}
