@@ -7,30 +7,47 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax for smaller columns */
-    gap: 10px; /* Reduce gap for tighter layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax as needed */
+    grid-template-rows: auto auto; /* Example with two rows - might need more */
+    gap: 0px; /* Remove the default gap */
+    position: relative; /* Needed for z-index */
 }
 
 .project {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px; /* Reduce padding */
+    padding: 10px; /* Keep some padding for visual spacing within the box */
     text-align: center;
+    margin-bottom: -15px; /* Adjust negative margin to pull items up */
+    margin-right: -15px; /* Adjust negative margin to pull items left */
+}
+
+/* Adjust margins for the last item in each row to prevent horizontal overlap with the next row */
+.project:nth-child(3n) { /* Assuming 3 columns based on minmax - adjust if needed */
+    margin-right: 0;
+}
+
+/* Adjust top margin for items in subsequent rows to create vertical overlap */
+.project:nth-child(n + 4) { /* Assuming the first row has 3 items - adjust accordingly */
+    margin-top: -15px; /* Adjust negative margin to pull from above */
 }
 
 .project img {
     display: block;
-    width: 100%; /* Make images fill the container */
+    width: 100%;
     height: auto;
-    margin-bottom: 5px; /* Reduce margin */
+    margin-bottom: 0; /* Remove default image margin */
     border: 1px solid #ddd;
     border-radius: 4px;
-    object-fit: cover; /* Ensure images cover the area without distortion */
-    aspect-ratio: 1 / 1; /* Maintain a square aspect ratio for the images */
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    position: relative; /* For z-index control if needed */
+    z-index: 1; /* Ensure images are generally above the container background */
 }
 
 .project.overlay-container {
+    /* Keep overlay positioning as is */
     position: relative;
 }
 
@@ -45,14 +62,14 @@ body {
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 5px 10px; /* Reduce padding */
+    padding: 5px 10px;
     border-radius: 5px;
-    font-size: 0.9em; /* Adjust font size */
+    font-size: 0.9em;
+    z-index: 2; /* Ensure overlay text is on top of overlapping images */
 }
 
 .project.fixed-container {
-    /* Width and height are controlled by the grid and image aspect ratio now */
-    overflow: hidden;
+    overflow: hidden; /* Keep overflow hidden */
 }
 
 .project.fixed-container img {
@@ -63,15 +80,17 @@ body {
 }
 
 .project.filtered-image img {
-    filter: sepia(50%);
+    filter: sepia(50%); /* Keep filter as is */
 }
 
 .project.with-caption img {
-    margin-bottom: 2px; /* Reduce margin */
+    margin-bottom: 2px; /* Adjust if needed */
 }
 
 .project .caption {
-    font-size: 0.8em; /* Adjust font size */
+    font-size: 0.8em;
     color: #777;
     margin-bottom: 0;
+    position: relative; /* For potential z-index adjustments */
+    z-index: 2; /* Ensure caption is above overlapping images */
 }
