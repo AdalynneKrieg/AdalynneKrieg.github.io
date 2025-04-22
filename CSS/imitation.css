@@ -1,53 +1,42 @@
 body {
     font-family: sans-serif;
-    margin: 20px;
+    margin: 0; /* Reset body margin to use full viewport */
     background-color: #f4f4f4;
     color: #333;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax as needed */
-    grid-template-rows: auto auto; /* Example with two rows - might need more */
-    gap: 0px; /* Remove the default gap */
-    position: relative; /* Needed for z-index */
+    grid-template-columns: repeat(auto-fit, minmax(auto, auto)); /* Let images dictate column width */
+    grid-auto-rows: min-content; /* Size rows based on content height */
+    gap: 10px; /* Adjust gap as needed */
+    height: 100vh; /* Make container the height of the viewport */
+    overflow: auto; /* Add scrollbars if content overflows in either direction */
+    padding: 20px; /* Add some padding around the images */
+    box-sizing: border-box; /* Include padding in the container's height */
 }
 
 .project {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px; /* Keep some padding for visual spacing within the box */
+    padding: 10px; /* Keep padding for visual spacing around the image */
     text-align: center;
-    margin-bottom: -15px; /* Adjust negative margin to pull items up */
-    margin-right: -15px; /* Adjust negative margin to pull items left */
-}
-
-/* Adjust margins for the last item in each row to prevent horizontal overlap with the next row */
-.project:nth-child(3n) { /* Assuming 3 columns based on minmax - adjust if needed */
-    margin-right: 0;
-}
-
-/* Adjust top margin for items in subsequent rows to create vertical overlap */
-.project:nth-child(n + 4) { /* Assuming the first row has 3 items - adjust accordingly */
-    margin-top: -15px; /* Adjust negative margin to pull from above */
 }
 
 .project img {
     display: block;
-    width: 100%;
-    height: auto;
-    margin-bottom: 0; /* Remove default image margin */
+    max-width: none; /* Prevent images from scaling down */
+    max-height: none; /* Prevent images from scaling down */
+    width: auto;    /* Use original width */
+    height: auto;   /* Use original height */
+    margin-bottom: 5px; /* Adjust as needed */
     border: 1px solid #ddd;
     border-radius: 4px;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
-    position: relative; /* For z-index control if needed */
-    z-index: 1; /* Ensure images are generally above the container background */
+    object-fit: initial; /* Do not resize the image */
 }
 
 .project.overlay-container {
-    /* Keep overlay positioning as is */
     position: relative;
 }
 
@@ -65,32 +54,34 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.9em;
-    z-index: 2; /* Ensure overlay text is on top of overlapping images */
+    z-index: 2;
 }
 
 .project.fixed-container {
-    overflow: hidden; /* Keep overflow hidden */
+    overflow: hidden;
 }
 
 .project.fixed-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: initial;
     margin-bottom: 0;
 }
 
 .project.filtered-image img {
-    filter: sepia(50%); /* Keep filter as is */
+    filter: sepia(50%);
 }
 
 .project.with-caption img {
-    margin-bottom: 2px; /* Adjust if needed */
+    margin-bottom: 2px;
 }
 
 .project .caption {
     font-size: 0.8em;
     color: #777;
     margin-bottom: 0;
-    position: relative; /* For potential z-index adjustments */
-    z-index: 2; /* Ensure caption is above overlapping images */
+    z-index: 2;
+    position: relative;
 }
